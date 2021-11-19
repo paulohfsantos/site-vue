@@ -1,0 +1,16 @@
+
+.card {
+  border-radius: .5rem;
+  background-color: #fff;
+  padding: 10px;
+  max-height: 400px;
+
+  .img {
+    width: 100%;
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+}

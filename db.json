@@ -1,0 +1,59 @@
+{
+  "projects": [
+    {
+      "id": 1,
+      "name": "Auth Jwt",
+      "type": "backend",
+      "description": "API auth backend project with Json Web Token generation",
+      "techs": [
+        "NodeJS",
+        "Typescript",
+        "ExpressJS",
+        "PostgreSQL",
+        "JWT"
+      ],
+      "status": "Done",
+      "url": "https://github.com/paulohfsantos/auth-jwt-ts"
+    },
+    {
+      "id": 2,
+      "name": "todo-list",
+      "type": "frontend",
+      "description": "Todo list front-end project",
+      "techs": [
+        "Angular 12",
+        "Typescript",
+        "Json-server"
+      ],
+      "status": "Done",
+      "url": "https://github.com/paulohfsantos/todo-list"
+    },
+    {
+      "id": 3,
+      "name": "Vue Proj Sys",
+      "type": "frontend",
+      "description": "Project management system",
+      "techs": [
+        "VueJS",
+        "Javascript",
+        "Json-server",
+        "Vuex"
+      ],
+      "status": "incomplete",
+      "url": "https://github.com/paulohfsantos/vue-proj-sys"
+    },
+    {
+      "id": 4,
+      "name": "Olx Clone frontend",
+      "type": "frontend",
+      "description": "A ecommerce based on Olx layout or similar",
+      "techs": [
+        "ReactJS",
+        "Redux",
+        "Styled-Components"
+      ],
+      "status": "incomplete",
+      "url": "https://github.com/paulohfsantos/olx-clone-frontend"
+    }
+  ]
+}

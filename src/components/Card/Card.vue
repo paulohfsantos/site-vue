@@ -1,5 +1,8 @@
 <template>
   <div class="card">
+    <div class="img">
+      <slot></slot>
+    </div>
     <div class="card-header">
       <h2>{{ title }}</h2>
     </div>
@@ -20,6 +23,14 @@ export default {
     body: {
       type: String,
       required: true,
+    },
+    image: {
+      type: String,
+      required: false,
+    },
+    imageAlt: {
+      type: String,
+      required: false,
     },
   },
 };
