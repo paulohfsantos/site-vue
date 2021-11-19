@@ -10,6 +10,12 @@ npm install
 npm run serve
 ```
 
+### Starts the fake Rest-API
+
+```
+npm run backend
+```
+
 ### Compiles and minifies for production
 ```
 npm run build
