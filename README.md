@@ -1,4 +1,4 @@
-# site-vue2
+# site-vue
 
 ## Project setup
 ```
