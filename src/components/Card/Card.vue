@@ -1,15 +1,18 @@
 <template>
-  <div class="card">
-    <div class="img">
-      <slot></slot>
+  <a :href="to" target="_blank">
+    <div class="card">
+      <div class="img">
+        <slot></slot>
+      </div>
+      <div class="card-header">
+        <h2>{{ title }}</h2>
+        <span v-for="(tech, i) in techs" :key="i"> {{ tech }}, </span>
+      </div>
+      <div class="card-body">
+        {{ body }}
+      </div>
     </div>
-    <div class="card-header">
-      <h2>{{ title }}</h2>
-    </div>
-    <div class="card-body">
-      {{ body }}
-    </div>
-  </div>
+  </a>
 </template>
 
 <script>
@@ -31,6 +34,14 @@ export default {
     imageAlt: {
       type: String,
       required: false,
+    },
+    to: {
+      type: String,
+      required: true,
+    },
+    techs: {
+      type: Array,
+      required: true,
     },
   },
 };

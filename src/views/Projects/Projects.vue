@@ -3,46 +3,16 @@
     <main>
       <h2>Projects</h2>
       <div class="projects-list">
-        <!-- after organizing the projects, I will loop this -->
-        <!-- <div class="projects-list-item">
-          <div class="project-image">
-            <img src="@/assets/ashe_2.jpg" alt="" />
-          </div>
-          <div class="projects-list-item-description">
-            <h3>Project 2</h3>
-          </div>
-        </div> -->
-        <Card title="proj-1" :body="body">
-          <template>
-            <img src="@/assets/ashe_2.jpg" alt="image-alt" />
-          </template>
-        </Card>
-
-        <div class="projects-list-item">
-          <div class="project-image">
-            <img src="" alt="" />
-          </div>
-          <div class="projects-list-item-description">
-            <h3>Project 2</h3>
-          </div>
-        </div>
-
-        <div class="projects-list-item">
-          <div class="project-image">
-            <img src="" alt="" />
-          </div>
-          <div class="projects-list-item-description">
-            <h3>Project 2</h3>
-          </div>
-        </div>
-
-        <div class="projects-list-item">
-          <div class="project-image">
-            <img src="" alt="" />
-          </div>
-          <div class="projects-list-item-description">
-            <h3>Project 2</h3>
-          </div>
+        <!-- loop right here -->
+        <div v-for="(item, index) in projects" :key="index">
+          <Card
+            :techs="item.techs"
+            :to="item.url"
+            :title="item.name"
+            :body="item.description"
+          >
+            <img :src="item.image" :alt="item.name" />
+          </Card>
         </div>
       </div>
     </main>
@@ -50,6 +20,8 @@
 </template>
 
 <script>
+import { mapGetters } from "vuex";
+import store from "@/store";
 import Card from "@/components/Card/Card.vue";
 
 export default {
@@ -58,9 +30,24 @@ export default {
     Card,
   },
 
-  data: () => ({
-    body: "this is the body, this is the body, this is the body, this is the body, this is the body, this is the body, this is the body, this is the body",
-  }),
+  beforeRouteUpdate(to, from, next) {
+    store.commit("resetProjects");
+    return next();
+  },
+  beforeRouteEnter(to, from, next) {
+    Promise.all([store.commit("resetProjects"), store.dispatch("getProjects")])
+      .then(() => {
+        next();
+      })
+      .catch((err) => {
+        // snackbar component to be made
+        console.log(err);
+      });
+  },
+
+  computed: {
+    ...mapGetters(["projects"]),
+  },
 };
 </script>
 

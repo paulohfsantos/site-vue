@@ -13,7 +13,8 @@
         "JWT"
       ],
       "status": "Done",
-      "url": "https://github.com/paulohfsantos/auth-jwt-ts"
+      "url": "https://github.com/paulohfsantos/auth-jwt-ts",
+      "image": "./images/node-js.jpg"
     },
     {
       "id": 2,
@@ -26,7 +27,8 @@
         "Json-server"
       ],
       "status": "Done",
-      "url": "https://github.com/paulohfsantos/todo-list"
+      "url": "https://github.com/paulohfsantos/todo-list",
+      "image": "./images/node-js.jpg"
     },
     {
       "id": 3,
@@ -40,7 +42,8 @@
         "Vuex"
       ],
       "status": "incomplete",
-      "url": "https://github.com/paulohfsantos/vue-proj-sys"
+      "url": "https://github.com/paulohfsantos/vue-proj-sys",
+      "image": "./images/node-js.jpg"
     },
     {
       "id": 4,
@@ -53,7 +56,8 @@
         "Styled-Components"
       ],
       "status": "incomplete",
-      "url": "https://github.com/paulohfsantos/olx-clone-frontend"
+      "url": "https://github.com/paulohfsantos/olx-clone-frontend",
+      "image": "./images/node-js.jpg"
     }
   ]
 }

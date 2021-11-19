@@ -1,16 +1,36 @@
 
-.card {
-  border-radius: .5rem;
-  background-color: #fff;
-  padding: 10px;
-  max-height: 400px;
+a {
+  text-decoration: none;
+  color: #333;
 
-  .img {
-    width: 100%;
+  &:hover {
+    color: #56ca7d;
+    transition: 0.3s ease-in-out;
+  }
 
-    img {
+  .card {
+    border-radius: .5rem;
+    background-color: #fff;
+    padding: 10px;
+    min-height: 300px;
+    max-height: 400px;
+
+    .img {
       width: 100%;
-      height: auto;
+
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+
+    .card-header {
+      border-bottom: 1px solid #eee;
+
+      span {
+        font-size: 12px;
+        font-weight: bold;
+      }
     }
   }
 }
