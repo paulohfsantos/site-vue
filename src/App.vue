@@ -1,5 +1,10 @@
 <template>
   <div id="app">
+    <Snackbar
+      :msg="`this is a snackbar msg`"
+      :color="color"
+      @closeSnackbar="closeSnackbar"
+    />
     <Navbar />
     <div class="container">
       <router-view />
@@ -9,10 +14,24 @@
 
 <script>
 import Navbar from "@/components/Navbar/Navbar";
+import Snackbar from "@/components/Snackbar/Snackbar";
+
 export default {
   name: "App",
   components: {
     Navbar,
+    Snackbar,
+  },
+  data: () => ({
+    color: "info",
+    // timeout: 3000,
+  }),
+
+  methods: {
+    closeSnackbar() {
+      this.$store.commit("closeSnackbar");
+      console.log("close snackkkk");
+    },
   },
 };
 </script>

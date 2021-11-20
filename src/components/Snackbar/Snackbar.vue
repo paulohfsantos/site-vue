@@ -1,0 +1,32 @@
+<template>
+  <div :class="'snackbar ' + color">
+    <div class="snackbar__content">
+      <div class="snackbar_msg">{{ msg }}</div>
+      <div class="close">
+        <button @click="$emit('closeSnackbar')">X</button>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script>
+export default {
+  name: "Snackbar",
+  props: {
+    msg: {
+      type: String,
+      required: true,
+    },
+    color: {
+      type: String,
+      required: false,
+      default: "success",
+    },
+  },
+};
+</script>
+
+<style lang="scss">
+@import "@/sass/globalColors.scss";
+@import "./style.scss";
+</style>
