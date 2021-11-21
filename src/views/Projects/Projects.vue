@@ -34,21 +34,26 @@ export default {
       this.$store.dispatch("getProjects"),
     ])
       .then(() => {
-        this.snackbar.show = true;
-        this.snackbar.msg = "Page loaded";
-        this.snackbar.color = "success";
-        this.snackbar.timeout = 3000;
+        this.$store.commit("changeSnackbar", {
+          show: true,
+          msg: "Page loaded",
+          color: "success",
+          timeout: 2000,
+        });
       })
       .catch(() => {
-        this.snackbar.show = true;
-        this.snackbar.msg = "Error loading projects";
-        this.snackbar.color = "error";
+        this.$store.commit("changeSnackbar", {
+          show: true,
+          msg: "Error loading projects",
+          color: "error",
+          timeout: 2000,
+        });
       });
 
     // dismiss snackbar after timeout
     setTimeout(() => {
       this.snackbar.show = false;
-    }, this.snackbar.timeout);
+    }, 2000);
   },
 
   computed: {
