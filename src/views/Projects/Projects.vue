@@ -3,7 +3,6 @@
     <main>
       <h2>Projects</h2>
       <div class="projects-list">
-        <!-- loop right here -->
         <div v-for="(item, index) in projects" :key="index">
           <Card
             :techs="item.techs"
@@ -36,11 +35,11 @@ export default {
   },
   beforeRouteEnter(to, from, next) {
     Promise.all([store.commit("resetProjects"), store.dispatch("getProjects")])
-      .then(() => {
-        next();
-      })
+      .then(() => next())
       .catch((err) => {
-        // snackbar component to be made
+        // this.snackbar.show = true;
+        // this.snackbar.msg = "Error loading projects";
+        // this.snackbar.color = "error";
         console.log(err);
       });
   },

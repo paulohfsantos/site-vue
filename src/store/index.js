@@ -11,6 +11,7 @@ export default new Vuex.Store({
       show: false,
       msg: "",
       color: "",
+      timeout: 6000,
     },
   },
   getters: {
@@ -21,6 +22,7 @@ export default new Vuex.Store({
       state.snackbar.show = snack.show;
       state.snackbar.msg = snack.msg;
       state.snackbar.color = snack.color;
+      state.snackbar.timeout = snack.timeout;
     },
   },
   actions: {
