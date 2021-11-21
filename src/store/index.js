@@ -11,7 +11,7 @@ export default new Vuex.Store({
       show: false,
       msg: "",
       color: "",
-      timeout: 6000,
+      timeout: 5000,
     },
   },
   getters: {
@@ -24,12 +24,13 @@ export default new Vuex.Store({
       state.snackbar.color = snack.color;
       state.snackbar.timeout = snack.timeout;
     },
+    destroySnackbar(state) {
+      state.snackbar.show = false;
+      state.snackbar.msg = "";
+      state.snackbar.color = "";
+      state.snackbar.timeout = 5000;
+    },
   },
-  // actions: {
-  //   snack({ commit }, snack) {
-  //     commit("changeSnackbar", snack);
-  //   },
-  // },
   modules: {
     Projects,
   },
