@@ -7,8 +7,15 @@
 </template>
 
 <script>
+import { mapGetters } from "vuex";
 export default {
   name: "Home",
+  mounted() {
+    console.log("mounted", this.snackbar);
+  },
+  computed: {
+    ...mapGetters(["snackbar"]),
+  },
 };
 </script>
 

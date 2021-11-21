@@ -34,14 +34,12 @@ export default {
     return next();
   },
   beforeRouteEnter(to, from, next) {
-    Promise.all([store.commit("resetProjects"), store.dispatch("getProjects")])
-      .then(() => next())
-      .catch((err) => {
-        // this.snackbar.show = true;
-        // this.snackbar.msg = "Error loading projects";
-        // this.snackbar.color = "error";
-        console.log(err);
-      });
+    Promise.all([
+      store.commit("resetProjects"),
+      store.dispatch("getProjects"),
+    ]).then(() => {
+      return next();
+    });
   },
 
   computed: {

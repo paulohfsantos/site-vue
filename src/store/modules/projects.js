@@ -49,18 +49,16 @@ const actions = {
     axios
       .get("http://localhost:5000/projects")
       .then((response) => {
-        console.log(response);
         commit("setProjects", response.data);
       })
       .catch((error) => {
-        console.log(error);
+        console.log("actions", error);
       });
   },
   getProject({ commit }, id) {
     axios
       .get(`http://localhost:5000/projects/${id}`)
       .then((response) => {
-        console.log(response);
         commit("setProject", response.data);
       })
       .catch((error) => {

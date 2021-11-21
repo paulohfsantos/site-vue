@@ -25,11 +25,11 @@ export default new Vuex.Store({
       state.snackbar.timeout = snack.timeout;
     },
   },
-  actions: {
-    snack({ commit }, snack) {
-      commit("changeSnackbar", snack);
-    },
-  },
+  // actions: {
+  //   snack({ commit }, snack) {
+  //     commit("changeSnackbar", snack);
+  //   },
+  // },
   modules: {
     Projects,
   },
