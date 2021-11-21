@@ -1,5 +1,11 @@
 <template>
   <div id="app">
+    <Snackbar
+      :show="snackbar.show"
+      :msg="snackbar.msg"
+      :color="snackbar.color"
+      @closeSnackbar="snackbar.show = false"
+    />
     <Navbar />
     <div class="container">
       <router-view />
@@ -8,11 +14,19 @@
 </template>
 
 <script>
+import { mapGetters } from "vuex";
 import Navbar from "@/components/Navbar/Navbar";
+import Snackbar from "@/components/Snackbar/Snackbar";
+
 export default {
   name: "App",
   components: {
     Navbar,
+    Snackbar,
+  },
+
+  computed: {
+    ...mapGetters(["snackbar"]),
   },
 };
 </script>
