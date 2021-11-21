@@ -4,7 +4,7 @@
       :show="snackbar.show"
       :msg="snackbar.msg"
       :color="snackbar.color"
-      @closeSnackbar="closeSnackbar"
+      @closeSnackbar="snackbar.show = false"
     />
     <Navbar />
     <div class="container">
@@ -23,17 +23,6 @@ export default {
   components: {
     Navbar,
     Snackbar,
-  },
-  data: () => ({
-    color: "info",
-    // timeout: 3000,
-  }),
-
-  methods: {
-    closeSnackbar() {
-      this.$store.commit("closeSnackbar");
-      console.log("close snackkkk");
-    },
   },
 
   computed: {
