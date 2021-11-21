@@ -1,8 +1,9 @@
 <template>
   <div id="app">
     <Snackbar
-      :msg="`this is a snackbar msg`"
-      :color="color"
+      :show="snackbar.show"
+      :msg="snackbar.msg"
+      :color="snackbar.color"
       @closeSnackbar="closeSnackbar"
     />
     <Navbar />
@@ -13,6 +14,7 @@
 </template>
 
 <script>
+import { mapGetters } from "vuex";
 import Navbar from "@/components/Navbar/Navbar";
 import Snackbar from "@/components/Snackbar/Snackbar";
 
@@ -32,6 +34,10 @@ export default {
       this.$store.commit("closeSnackbar");
       console.log("close snackkkk");
     },
+  },
+
+  computed: {
+    ...mapGetters(["snackbar"]),
   },
 };
 </script>

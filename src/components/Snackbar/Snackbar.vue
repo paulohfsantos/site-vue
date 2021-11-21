@@ -1,5 +1,5 @@
 <template>
-  <div :class="'snackbar ' + color">
+  <div v-if="show" :class="'snackbar ' + color">
     <div class="snackbar__content">
       <div class="snackbar_msg">{{ msg }}</div>
       <div class="close">
@@ -10,6 +10,7 @@
 </template>
 
 <script>
+import { mapGetters } from "vuex";
 export default {
   name: "Snackbar",
   props: {
@@ -22,6 +23,14 @@ export default {
       required: false,
       default: "success",
     },
+    show: {
+      type: Boolean,
+      required: true,
+    },
+  },
+
+  computed: {
+    ...mapGetters(["snackbar"]),
   },
 };
 </script>
