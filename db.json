@@ -1,4 +1,9 @@
 {
+  "about": {
+    "name": "Paulo Henrique Santos",
+    "desc": "Front-end developer with a background in Digital Design. I have strong passions for technology, hardware, dicentralization. I'm currently working as front-end developer at a startup",
+    "image": "https://media-exp1.licdn.com/dms/image/C4D03AQHRwVR2a6jkiQ/profile-displayphoto-shrink_800_800/0/1633547520181?e=1643241600&v=beta&t=vFW1Qj77-QcrrsJKCTBdYDrzQPpUeb9_9YA0UAavxQE"
+  },
   "projects": [
     {
       "id": 1,
@@ -58,6 +63,44 @@
       "status": "incomplete",
       "url": "https://github.com/paulohfsantos/olx-clone-frontend",
       "image": "./images/node-js.jpg"
+    }
+  ],
+  "jobs": [
+    {
+      "id": 1,
+      "company": "Dohms Web",
+      "title": "Front-end developer",
+      "date": "Mar 2020 - Feb 2021",
+      "activities": [
+        "Website Maintenance",
+        "Layout and Newsletter production",
+        "API consuming with jQuery Ajax",
+        "Website creation with HTML5, CSS3, Bootstrap 4, Javascript/jQuery and Vue.js"
+      ]
+    },
+    {
+      "id": 2,
+      "company": "Matilha Digital",
+      "title": "Front-end developer",
+      "date": "Mar 2021 - Jul 2021",
+      "activities": [
+        "Coding an tourism web application with Vue, Vuex",
+        "Application front-end",
+        "Back-end integration with Docker containers"
+      ]
+    },
+    {
+      "id": 3,
+      "company": "Lyndus",
+      "title": "Front-end developer",
+      "date": "Jul 2021 - Present",
+      "activities": [
+        "Direct participation in the 3 web system development: Client, Beauty-Spot and Bonder",
+        "New functionalities development using Javascript and Typescript",
+        "Development participation using React.js and Vue.js in front-end projects",
+        "Component styling using Material Ui (React) and Vuetify (Vue)",
+        "Making reusable components and utils"
+      ]
     }
   ]
 }
