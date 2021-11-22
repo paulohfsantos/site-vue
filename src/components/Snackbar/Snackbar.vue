@@ -10,7 +10,6 @@
 </template>
 
 <script>
-import { mapGetters } from "vuex";
 export default {
   name: "Snackbar",
   props: {
@@ -27,10 +26,6 @@ export default {
       type: Boolean,
       required: true,
     },
-  },
-
-  computed: {
-    ...mapGetters(["snackbar"]),
   },
 };
 </script>

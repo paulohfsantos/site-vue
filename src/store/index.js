@@ -12,7 +12,6 @@ export default new Vuex.Store({
       show: false,
       msg: "",
       color: "",
-      timeout: 5000,
     },
   },
   getters: {

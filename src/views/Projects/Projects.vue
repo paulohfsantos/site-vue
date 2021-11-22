@@ -38,7 +38,6 @@ export default {
           show: true,
           msg: "Page loaded",
           color: "success",
-          timeout: 2000,
         });
       })
       .catch(() => {
@@ -46,14 +45,13 @@ export default {
           show: true,
           msg: "Error loading projects",
           color: "error",
-          timeout: 2000,
         });
       });
 
     // dismiss snackbar after timeout
     setTimeout(() => {
       this.snackbar.show = false;
-    }, 2000);
+    }, 1000);
   },
 
   computed: {
