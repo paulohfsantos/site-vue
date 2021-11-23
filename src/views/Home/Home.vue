@@ -2,19 +2,18 @@
   <div class="home">
     <main>
       <h2>main site content</h2>
+      <Icon name="linkedin" />
     </main>
   </div>
 </template>
 
 <script>
-import { mapGetters } from "vuex";
+import Icon from "@/components/Icon/Icon.vue";
+
 export default {
   name: "Home",
-  mounted() {
-    console.log("mounted", this.snackbar);
-  },
-  computed: {
-    ...mapGetters(["snackbar"]),
+  components: {
+    Icon,
   },
 };
 </script>
