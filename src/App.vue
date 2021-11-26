@@ -6,6 +6,12 @@
       :color="snackbar.color"
       @closeSnackbar="snackbar.show = false"
     />
+    <Alert
+      :visible="alert.visible"
+      :text="alert.text"
+      :status="alert.status"
+      @closeAlert="alert.show = false"
+    />
     <Navbar />
     <div class="container">
       <router-view />
@@ -16,6 +22,7 @@
 <script>
 import { mapGetters } from "vuex";
 import Navbar from "@/components/Navbar/Navbar";
+import Alert from "@/components/Alert/Alert";
 import Snackbar from "@/components/Snackbar/Snackbar";
 
 export default {
@@ -23,10 +30,11 @@ export default {
   components: {
     Navbar,
     Snackbar,
+    Alert,
   },
 
   computed: {
-    ...mapGetters(["snackbar"]),
+    ...mapGetters(["snackbar", "alert"]),
   },
 };
 </script>

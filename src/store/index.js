@@ -13,9 +13,15 @@ export default new Vuex.Store({
       msg: "",
       color: "",
     },
+    alert: {
+      visible: false,
+      text: "",
+      status: "",
+    },
   },
   getters: {
     snackbar: (state) => state.snackbar,
+    alert: (state) => state.alert,
   },
   mutations: {
     changeSnackbar(state, snack) {
@@ -23,10 +29,10 @@ export default new Vuex.Store({
       state.snackbar.msg = snack.msg;
       state.snackbar.color = snack.color;
     },
-    destroySnackbar(state) {
-      state.snackbar.show = false;
-      state.snackbar.msg = "";
-      state.snackbar.color = "";
+    changeAlert(state, alert) {
+      state.alert.show = alert.show;
+      state.alert.msg = alert.msg;
+      state.alert.color = alert.color;
     },
   },
   modules: {
