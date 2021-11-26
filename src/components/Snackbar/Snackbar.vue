@@ -1,7 +1,7 @@
 <template>
   <div v-if="show" :class="'snackbar ' + color">
     <div class="snackbar__content">
-      <div class="snackbar_msg">{{ msg }}</div>
+      <div class="snackbar_msg">{{ message }}</div>
       <div class="close">
         <button @click="$emit('closeSnackbar')">X</button>
       </div>
@@ -13,7 +13,7 @@
 export default {
   name: "Snackbar",
   props: {
-    msg: {
+    message: {
       type: String,
       required: true,
     },

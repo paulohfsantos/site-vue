@@ -2,7 +2,7 @@
   <div id="app">
     <Snackbar
       :show="snackbar.show"
-      :msg="snackbar.msg"
+      :message="snackbar.msg"
       :color="snackbar.color"
       @closeSnackbar="snackbar.show = false"
     />

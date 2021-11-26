@@ -22,13 +22,11 @@ export default new Vuex.Store({
       state.snackbar.show = snack.show;
       state.snackbar.msg = snack.msg;
       state.snackbar.color = snack.color;
-      state.snackbar.timeout = snack.timeout;
     },
     destroySnackbar(state) {
       state.snackbar.show = false;
       state.snackbar.msg = "";
       state.snackbar.color = "";
-      state.snackbar.timeout = 5000;
     },
   },
   modules: {
