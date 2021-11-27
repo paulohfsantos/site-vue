@@ -13,9 +13,12 @@
       @closeAlert="alert.show = false"
     />
     <Navbar />
-    <div class="container">
-      <router-view />
-    </div>
+    <main>
+      <div class="container">
+        <router-view />
+      </div>
+    </main>
+    <Footer />
   </div>
 </template>
 
@@ -24,6 +27,7 @@ import { mapGetters } from "vuex";
 import Navbar from "@/components/Navbar/Navbar";
 import Alert from "@/components/Alert/Alert";
 import Snackbar from "@/components/Snackbar/Snackbar";
+import Footer from "@/components/Footer/Footer";
 
 export default {
   name: "App",
@@ -31,6 +35,7 @@ export default {
     Navbar,
     Snackbar,
     Alert,
+    Footer,
   },
 
   computed: {
@@ -45,12 +50,8 @@ export default {
 
 #app {
   background-color: #eee;
+}
+main {
   min-height: 100vh;
-
-  .container {
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 0.5rem;
-  }
 }
 </style>
