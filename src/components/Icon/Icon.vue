@@ -1,9 +1,5 @@
 <template>
-  <section class="icons">
-    <div class="icons-container">
-      <i :class="`icon-` + name"></i>
-    </div>
-  </section>
+  <i :class="`icon-` + name + ` ${variant == 'dark' ? 'dark' : 'light'}`"></i>
 </template>
 
 <script>
@@ -14,6 +10,10 @@ export default {
     name: {
       type: String,
       required: true,
+    },
+    variant: {
+      type: String,
+      default: "",
     },
   },
 };

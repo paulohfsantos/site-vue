@@ -3,7 +3,9 @@
     <div class="snackbar__content">
       <div class="snackbar_msg">{{ message }}</div>
       <div class="close">
-        <button @click="$emit('closeSnackbar')">X</button>
+        <button @click="$emit('closeSnackbar')">
+          <icon name="close" variant="light"></icon>
+        </button>
       </div>
     </div>
   </div>

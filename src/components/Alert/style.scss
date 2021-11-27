@@ -17,6 +17,10 @@
   .alert_close {
     button {
       @include button;
+
+      i {
+        color: #fff;
+      }
     }
   }
 }

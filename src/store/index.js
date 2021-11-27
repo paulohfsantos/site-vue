@@ -14,9 +14,9 @@ export default new Vuex.Store({
       color: "",
     },
     alert: {
-      visible: false,
-      text: "",
-      status: "",
+      visible: true,
+      text: "ddd",
+      status: "success",
     },
   },
   getters: {

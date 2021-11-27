@@ -2,7 +2,9 @@
   <div v-if="visible" :class="'alert ' + status">
     <div class="alert_msg">{{ text }}</div>
     <div class="alert_close">
-      <button @click="$emit('closeAlert')">X</button>
+      <button @click="$emit('closeAlert')">
+        <icon name="close" variant="light"></icon>
+      </button>
     </div>
   </div>
 </template>
