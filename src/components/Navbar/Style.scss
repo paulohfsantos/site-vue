@@ -23,8 +23,15 @@ header {
           padding: 0 .5rem;
           
           a {
-            color: #333;
             text-decoration: none;
+
+            &:hover {
+              color: $sucess-text;
+            }
+          }
+
+          .router-link-exact-active {
+            color: $sucess-text;
           }
         }
       }

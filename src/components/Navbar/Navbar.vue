@@ -26,18 +26,9 @@
   </header>
 </template>
 
-<script>
-// export default {
-//   name: "Navbar",
-//   props: {
-//     container: {
-//       type: String,
-//       default: "container",
-//     },
-//   },
-// };
-</script>
+<script></script>
 
 <style lang="scss">
+@import "@/sass/globalColors.scss";
 @import "./style.scss";
 </style>

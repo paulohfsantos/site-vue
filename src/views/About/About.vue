@@ -16,6 +16,13 @@
               <h3>{{ about.name }}</h3>
               <p>{{ about.desc }}</p>
             </div>
+            <div class="socials">
+              <div class="links" v-for="(link, i) in about.socials" :key="i">
+                <a :href="link.url" target="_blank">
+                  <icon :name="link.name" variant="dark"></icon>
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -25,6 +32,7 @@
 
 <script>
 import { mapGetters } from "vuex";
+
 export default {
   name: "About",
 

@@ -7,4 +7,20 @@
       margin-bottom: 1.5rem;
     }
   }
+
+  .about-me {
+    padding: 10px;
+  }
+
+  .socials {
+    padding: 10px;
+    display: flex;
+    justify-content: flex-end;
+
+    .links {
+      a {
+        margin-right: 25px;
+      }
+    }
+  }
 }
