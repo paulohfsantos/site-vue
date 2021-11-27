@@ -1,5 +1,8 @@
 <template>
-  <i :class="`icon-` + name + ` ${variant == 'dark' ? 'dark' : 'light'}`"></i>
+  <i
+    :class="`icon-` + name + ` ${variant == 'dark' ? 'dark' : 'light'}`"
+    :title="title"
+  ></i>
 </template>
 
 <script>
@@ -12,6 +15,10 @@ export default {
       required: true,
     },
     variant: {
+      type: String,
+      default: "",
+    },
+    title: {
       type: String,
       default: "",
     },
