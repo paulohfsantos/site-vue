@@ -1,14 +1,19 @@
 <template>
-  <div class="home">
-    <main>
+  <section class="home">
+    <div>
       <h2>main site content</h2>
-    </main>
-  </div>
+    </div>
+  </section>
 </template>
 
 <script>
+import { mapGetters } from "vuex";
 export default {
   name: "Home",
+
+  computed: {
+    ...mapGetters(["dialog"]),
+  },
 };
 </script>
 

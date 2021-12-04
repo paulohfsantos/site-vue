@@ -12,6 +12,12 @@
       :status="alert.status"
       @closeAlert="alert.show = false"
     />
+    <modal
+      :view="dialog.modalCount"
+      @closeModal="dialog.visible = false"
+      v-show="dialog.visible"
+      :modalTitle="dialog.title"
+    />
     <Navbar />
     <main>
       <div class="container">
@@ -39,7 +45,7 @@ export default {
   },
 
   computed: {
-    ...mapGetters(["snackbar", "alert"]),
+    ...mapGetters(["snackbar", "alert", "dialog"]),
   },
 };
 </script>
